@@ -1,0 +1,150 @@
+.imgHolder {
+  height: 300px;
+  background-image: var(--img-backg-desktop);
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .imgHolder {
+    background-image: var(--img-backg-mobile);
+    height: 200px;
+  }
+}
+
+.setting {
+  top: clamp(60px, 7vh, 80px);
+  margin: auto;
+  width: 540px;
+  max-width: 100%;
+  color: white;
+  letter-spacing: 1.5px;
+  position: relative;
+
+
+}
+
+.setting a {
+  cursor: pointer;
+}
+
+.newtodo {
+  top: clamp(60px, 7vh, 80px);
+  margin: auto;
+  width: 540px;
+  max-width: 100%;
+  background-color: var(--second-bg-color);
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+
+}
+
+.round {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+}
+
+.newtodo input,
+.newtodo input:focus {
+  border: none;
+  background-color: var(--second-bg-color);
+  color: var(--primary-text-color);
+
+
+}
+
+.newtodo input::placeholder {
+  color: var(--primary-text-color);
+}
+
+
+
+.back {
+  min-height: calc(100vh - 300px);
+  background-color: var(--primary-bg-color);
+
+}
+
+
+.todos {
+  margin: auto;
+  text-align: center;
+  list-style: none;
+  width: 540px;
+  max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  padding: 0;
+  border-radius: 5px;
+  background-color: var(--second-bg-color);
+  position: relative;
+  top: -50px;
+  ;
+
+}
+
+@media (max-width: 767px) {
+  .back {
+    min-height: calc(100vh - 200px);
+  }
+
+  .todos {
+    top: -15px;
+  }
+}
+
+.todos>li {
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+.todos>li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+.foot-list p {
+  margin: 0;
+  font-weight: 400;
+}
+
+.foot-list p,
+.filter>li {
+  color: var(--Dark-Grayish-Blue);
+  cursor: pointer;
+}
+
+.filter>li:not(.active):hover,
+.foot-list p:hover {
+  color: var(--primary-text-color);
+}
+
+.filter {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter .active {
+  color: var(--Bright-Blue);
+}
+
+@media (max-width: 767px) {
+  .filter {
+    position: absolute;
+    bottom: -85px;
+    width: 100%;
+    background-color: var(--second-bg-color);
+    padding: 20px;
+    justify-content: center;
+    border-radius: 5px;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  }
+}

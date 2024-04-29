@@ -1,0 +1,62 @@
+.todo p {
+  margin: 0;
+  cursor: pointer;
+}
+
+.round {
+  position: relative;
+  display: flex;
+}
+
+.round label {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 27px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 27px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  position: relative;
+  z-index: 564;
+  opacity: 0;
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+}
+
+.round input[type="checkbox"]:checked+label {
+  background-image: var(--Check-Background);
+  background-size: cover;
+}
+
+.round input[type="checkbox"]:checked+label:after {
+  opacity: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: var(--completed-text-color);
+}
+
+.remove {
+  cursor: pointer;
+}

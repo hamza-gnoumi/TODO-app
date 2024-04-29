@@ -1,0 +1,11 @@
+<div class="todo d-flex align-items-center justify-content-between">
+  <div class="text d-flex align-items-center gap-2">
+    <div class="round">
+      <input type="checkbox" [checked]="todo.item.completed" [id]="todo.id" (click)="makeit()" />
+      <label [for]="todo.id"></label>
+    </div>
+    <p [ngClass]="{'completed':todo.item.completed}" class="text-start">{{todo.item.desc}}</p>
+  </div>
+
+  <img src="../../../assets/images/icon-cross.svg" class="remove" (click)="removetodo(todo.id)" alt="icon-cross">
+</div>
